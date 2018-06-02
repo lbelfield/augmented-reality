@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 
 // import Hiro from './hiro/Hiro';
+import Torus from './torus/Torus';
 // import Earth from './earth/Earth';
-import Nandos from './nandos/Nandos';
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           {/* <Route path="/hiro" component={Hiro} /> */}
+          <Route path="/torus" component={Torus} />
           {/* <Route path="/earth" component={Earth} /> */}
-          <Route path="/earth" component={Nandos} />
         </Switch>
       </BrowserRouter>
     );

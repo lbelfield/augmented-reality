@@ -3,19 +3,17 @@ import { render } from 'react-dom';
 import ReactDOM from 'react-dom';
 import { AFrameRenderer, Marker } from 'react-web-ar';
 
-import earth from './Earth.png';
-
 class Earth extends Component {
   render() {
     return (
-      <AFrameRenderer arToolKit={{ sourceType: 'webcam', sourceUrl: './images/hiro_marker.png'}} >
+      <AFrameRenderer arToolKit={{ sourceType: 'webcam' }} >
         <Marker parameters={{ preset: 'hiro' }}>
           <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="1" segments-height="53">
             <a-animation
               attribute="rotation"
               dur="3000"
-              from="-10 0 0"
-              to="-10 0 0"
+              from="1 -90 90"
+              to="360 -90 90"
               easing="linear"
               repeat="indefinite"
             />
