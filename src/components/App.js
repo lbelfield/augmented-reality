@@ -1,8 +1,7 @@
 import React from 'react';
 // import React, {Component} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import { render } from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 
 // import Hiro from './hiro/Hiro';
 import Torus from './torus/Torus';

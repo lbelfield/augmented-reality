@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import { AFrameRenderer, Marker } from 'react-web-ar';
 
 class Hiro extends Component {
