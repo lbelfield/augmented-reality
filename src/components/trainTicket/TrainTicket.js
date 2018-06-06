@@ -11,11 +11,11 @@ class TrainTicket extends Component {
                 type: "pattern",
                 url: "https://raw.githubusercontent.com/lbelfield/augmented-reality/master/src/components/trainTicket/train-ticket.patt"
               }}>
-              <a-box position="0 0.5 0" material="opacity: 0.5; side: double; color: #CA83FF;">
-                <a-torus-knot radius="0.26" radius-tubular="0.05">
-                  <a-animation attribute="rotation" to="360 0 0" dur="3000" easing="linear" repeat="indefinite" />
-                </a-torus-knot>
-              </a-box>
+              {/* Use phone to take high res pic of the train ticket
+                  Use Sketch to draw the lines on the new ticket, then set the transparency behind it as 0.
+                  Then export this ticket with lines as an png file, like the one in Trainline. */}
+              <a-image src="https://raw.githubusercontent.com/lbelfield/augmented-reality/master/src/components/trainTicket/raw-train-ticket.png">
+              </a-image>
             </Marker>
           </AFrameRenderer>
         );
