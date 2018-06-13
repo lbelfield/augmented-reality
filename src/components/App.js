@@ -8,6 +8,7 @@ import ReactDOM, { render } from 'react-dom';
 // import RollingScopes from './rollingScopes/RollingScopes';
 // import BespokeMarker from './bespokeMarker/BespokeMarker';
 // import Earth from './earth/Earth';
+// https://10.41.72.88:3000
 import TrainTicket from './trainTicket/TrainTicket';
 
 class App extends Component {
