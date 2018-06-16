@@ -3,7 +3,7 @@ import ReactDOM, { render } from 'react-dom';
 import { AFrameRenderer, Marker } from 'react-web-ar';
 import journeySummaryImage from './journey-summary.png';
 
-class TrainTicket extends Component {
+class LiveTrainTicket extends Component {
     render() {
         return (
           <AFrameRenderer arToolKit={{ sourceType: 'webcam' }}>
@@ -22,6 +22,6 @@ class TrainTicket extends Component {
     }
 }
 
-render(<TrainTicket />, document.getElementById('root'));
+render(<LiveTrainTicket />, document.getElementById('root'));
 
-export default TrainTicket;
+export default LiveTrainTicket;

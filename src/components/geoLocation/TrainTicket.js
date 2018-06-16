@@ -14,8 +14,6 @@ class GeoLocation extends Component {
               {/* Use phone to take high res pic of the train ticket
                   Use Sketch to draw the lines on the new ticket, then set the transparency behind it as 0.
                   Then export this ticket with lines as an png file, like the one in Trainline. */}
-              <a-link src="">
-              </a-link>
             </Marker>
           </AFrameRenderer>
         );
