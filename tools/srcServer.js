@@ -7,6 +7,8 @@ import open from 'open';
 import { createServer } from "https";
 import { readFileSync } from "fs";
 
+import Screenshot from './screenshot';
+
 /* eslint-disable no-console */
 
 const port = 3000;
@@ -29,6 +31,9 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.get('*', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
 });
+
+Screenshot('http://google.com', 'src/components/liveTrainTicket/train-times', '.png');
+// 'http://10.41.72.96:9000'
 
 const server = createServer(httpsOptions, app).listen(port, () => {
   console.log('server running at ' + port);
