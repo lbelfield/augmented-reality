@@ -7,8 +7,16 @@ import open from 'open';
 import { createServer } from "https";
 import { readFileSync } from "fs";
 
+<<<<<<< Updated upstream
 import Screenshot from './screenshot';
 
+=======
+<<<<<<< Updated upstream
+=======
+// import Screenshot from './screenshot';
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 /* eslint-disable no-console */
 
 const port = 3000;
@@ -32,8 +40,11 @@ app.get('*', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
 });
 
-Screenshot('http://google.com', 'src/components/liveTrainTicket/train-times', '.png');
-// 'http://10.41.72.96:9000'
+// For Phantom
+// Screenshot('http://10.41.72.96:9000', 'src/components/liveTrainTicket/train-times', '.png');
+
+// For Chrome Driver
+// Screenshot();
 
 const server = createServer(httpsOptions, app).listen(port, () => {
   console.log('server running at ' + port);
