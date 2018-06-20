@@ -10,8 +10,8 @@ import ReactDOM, { render } from 'react-dom';
 // import RollingScopes from './rollingScopes/RollingScopes';
 // import BespokeMarker from './bespokeMarker/BespokeMarker';
 // import Earth from './earth/Earth';
-// import TrainTicket from './trainTicket/TrainTicket';
-import LiveTrainTicket from './liveTrainTicket/LiveTrainTicket';
+import TrainTicket from './trainTicket/TrainTicket';
+// import LiveTrainTicket from './liveTrainTicket/LiveTrainTicket';
 
 class App extends Component {
   render() {
@@ -23,8 +23,8 @@ class App extends Component {
           {/* <Route path="/earth" component={Earth} /> */}
           {/* <Route path="/rollingScopes" component={RollingScopes} /> */}
           {/* <Route path="/bespokeMarker" component={BespokeMarker} /> */}
-          {/* <Route path="/trainTicket" component={TrainTicket} /> */}
-          <Route path="/liveTrainTicket" component={LiveTrainTicket} />
+          <Route path="/trainTicket" component={TrainTicket} />
+          {/* <Route path="/liveTrainTicket" component={LiveTrainTicket} /> */}
         </Switch>
       </BrowserRouter>
     );
