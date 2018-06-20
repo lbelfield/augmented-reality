@@ -4,6 +4,21 @@
     <title>Augmented Reality</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script>
+      // Component to change to a sequential image on click using the ids of the a-assets-item.
+    AFRAME.registerComponent('cursor-listener', {
+      init: function () {
+        var lastIndex = -1;
+        var images = ['#trainTicket', '#journeySummaryImage']
+        window.addEventListener('click', function () {
+          var box = document.getElementById("box");
+          lastIndex = (lastIndex + 1) % images.length;
+          box.setAttribute('material', `src: ${images[lastIndex]}`);
+        });
+      }
+    });
+    </script>
   </head>
   <body>
     <div id="root"></div>
