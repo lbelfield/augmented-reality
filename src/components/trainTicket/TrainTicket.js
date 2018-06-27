@@ -14,7 +14,7 @@ class TrainTicket extends Component {
               }}>
               <a-assets-item img id="journeySummaryImage" src={journeySummaryImage} />
               <a-entity
-                geometry="primitive: box"
+                geometry="primitive: box; height: 0.1;"
                 material="shader: flat; src: #journeySummaryImage" />
             </Marker>
           </AFrameRenderer>
