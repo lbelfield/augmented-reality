@@ -8,7 +8,9 @@ class Earth extends Component {
     return (
       <AFrameRenderer arToolKit={{ sourceType: 'webcam' }} >
         <Marker parameters={{ preset: 'hiro' }}>
+
           <a-assets-item img id="earthImage" src={earthImage} />
+
           <a-sphere src="#earthImage" radius="1" segments-height="53">
             <a-animation
               attribute="rotation"
@@ -16,9 +18,9 @@ class Earth extends Component {
               from="1 -90 90"
               to="360 -90 90"
               easing="linear"
-              repeat="indefinite"
-            />
+              repeat="indefinite" />
           </a-sphere>
+
         </Marker>
       </AFrameRenderer>
     );
