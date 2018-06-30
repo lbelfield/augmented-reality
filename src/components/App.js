@@ -5,21 +5,15 @@ import ReactDOM, { render } from 'react-dom';
 // ifconfig -> en0 -> inet -> https/x:3000
 
 // import Hiro from './hiro/Hiro';
-// import Torus from './torus/Torus';
-// import RollingScopes from './rollingScopes/RollingScopes';
 // import Earth from './earth/Earth';
-// import TrainTicket from './trainTicket/TrainTicket';
-import Railcard from './railcard/Railcard';
+import TrainTicket from './trainTicket/TrainTicket';
 
 class App extends Component {
   render() {
     return (
       // <Hiro />
-      // <Torus />
       // <Earth />
-      // <RollingScopes />
-      // <TrainTicket />
-      <Railcard />
+      <TrainTicket />
     );
   }
 }
