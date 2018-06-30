@@ -4,69 +4,6 @@
     <title>Augmented Reality</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
-    <script>
-      // Component to change to a sequential image on click using the ids of the a-assets-item.
-    AFRAME.registerComponent('ticket-listener', {
-      init: function () {
-        var lastIndex = -1;
-        var images = ['#userProfile', '#appTicket', '#appTicket', '#appTicket'];
-        window.addEventListener('click', function (event) {
-          var box = document.getElementById("ticket");
-          lastIndex = (lastIndex + 1) % images.length;
-
-          if(images[lastIndex] === '#userProfile') {
-            document.querySelector('#ticket').emit('ticketAnimation');
-          }
-
-          box.setAttribute('material', `src: ${images[lastIndex]}`);
-          box.setAttribute('visible', 'src: true');
-        });
-      }
-    });
-
-    AFRAME.registerComponent('journey-details-listener', {
-      init: function () {
-        var lastIndex = -1;
-        var visible = ['false', 'false', 'true', 'false'];
-        window.addEventListener('click', function (event) {
-          var box = document.getElementById("journey-details");
-          lastIndex = (lastIndex + 1) % visible.length;
-          if(visible[lastIndex] === 'true') {
-            document.querySelector('#journey-details').emit('journeyDetailsAnimation');
-          }
-
-          box.setAttribute('visible', `${visible[lastIndex]}`)
-        });
-      }
-    });
-
-    AFRAME.registerComponent('cylinder-info-icon-listener', {
-      init: function () {
-        var lastIndex = -1;
-        var position = ['-0.25 0.3 0.5', '-0.25 0.1 0.5', '-0.25 0.1 0.5', '-0.25 0.1 0.5'];
-        window.addEventListener('click', function (event) {
-          lastIndex = (lastIndex + 1) % position.length;
-          var cylinderUserPhoto = document.getElementById("cylinder-info-icon");
-
-          cylinderUserPhoto.setAttribute('position', `${position[lastIndex]}`);
-        });
-      }
-    });
-
-    AFRAME.registerComponent('cylinder-train-icon-listener', {
-      init: function () {
-        var lastIndex = -1;
-        var position = ['0.25 0.1 0.5', '0.25 0.3 0.5', '0.25 0.3 0.5', '0.25 0.1 0.5'];
-        window.addEventListener('click', function (event) {
-          lastIndex = (lastIndex + 1) % position.length;
-          var cylinderUserPhoto = document.getElementById("cylinder-train-icon");
-
-          cylinderUserPhoto.setAttribute('position', `${position[lastIndex]}`);
-        });
-      }
-    });
-    </script>
   </head>
   <body>
     <div id="root"></div>
