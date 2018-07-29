@@ -46,7 +46,7 @@
     "eslint-watch": "3.0.0",
     "eventsource-polyfill": "0.9.6",
     "expect": "1.19.0",
-    "express": "4.13.4",
+    "express": "4.16.3",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "jsdom": "8.5.0",
