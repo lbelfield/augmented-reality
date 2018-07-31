@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 // import React, {Component} from 'react';
 import ReactDOM, { render } from 'react-dom';
 
@@ -9,7 +9,9 @@ import ReactDOM, { render } from 'react-dom';
 // import RollingScopes from './rollingScopes/RollingScopes';
 // import Earth from './earth/Earth';
 // import TrainTicket from './trainTicket/TrainTicket';
-import Railcard from './railcard/Railcard';
+// import Railcard from './railcard/Railcard';
+// import TrainTracker from './trainTracker/TrainTracker';k
+import MultiMarker from './ArTest';
 
 class App extends Component {
   render() {
@@ -19,7 +21,8 @@ class App extends Component {
       // <Earth />
       // <RollingScopes />
       // <TrainTicket />
-      <Railcard />
+      // <Railcard />
+      <MultiMarker />
     );
   }
 }

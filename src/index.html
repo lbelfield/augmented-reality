@@ -6,6 +6,25 @@
     <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
     <script>
+
+    AFRAME.registerComponent('train-tracker-listener', {
+      init: function () {
+        var lastIndex = -1;
+        var images = [''];
+        window.addEventListener('click', function (event) {
+          var box = document.getElementById("ticket");
+          lastIndex = (lastIndex + 1) % images.length;
+
+          if(images[lastIndex] === '#userProfile') {
+            document.querySelector('#ticket').emit('ticketAnimation');
+          }
+
+          box.setAttribute('material', `src: ${images[lastIndex]}`);
+          box.setAttribute('visible', 'src: true');
+        });
+      }
+    });
+
       // Component to change to a sequential image on click using the ids of the a-assets-item.
     AFRAME.registerComponent('ticket-listener', {
       init: function () {
