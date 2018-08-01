@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+      <title>Mapbox AR/VR</title>
+  <!-- Scripts -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+    <script src="aframe.min.js"></script>
+    <script src="aframe-ar.js"></script>
+  <!-- Open Source FTW -->
+  <!-- CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="MapboxAR.css">
+
+      <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+      <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+      <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+  </head>
+
+  <body>
+  <div id = "bar">&nbsp;&nbsp;&nbsp;<button class="button" type ="submit" onclick="window.open('Hiro.png')"><span class="glyphicon glyphicon-th-print"></span>Get the HIRO Marker</button></div>
+  <div id="map"></div>
+
+  <a-scene embedded artoolkit='sourceType: webcam;'>
+  <a-sphere id="image" position="0 0.5 0" </a-sphere>
+  <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+
+
+
+
+
+  </body>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWxsYW53YWxrZXJpdCIsImEiOiJZT3NlYnRFIn0.8-oyZEa83PvOolKOStdCbg';
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v9',
+      center: [0, 0],
+      zoom: 1
+   });
+
+  map.on('load', function () {
+  var c = document.querySelector("#map canvas");
+  var img    = c.toDataURL("image/png");
+  var texture = document.getElementById("image");
+  texture.setAttribute("src", img);
+  document.getElementById("image").appendChild(texture);
+  });
+
+  </script>
+  </html>
