@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
-    "bootstrap": "3.3.6",
+    "bootstrap": "4.1.2",
     "history": "4.7.2",
     "jquery": "2.2.3",
     "prop-types": "15.6.1",
